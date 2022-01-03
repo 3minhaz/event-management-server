@@ -9,6 +9,7 @@ const app = express()
 connectDb();
 //import Custom Routes
 const userRoutes = require('./routes/userRoutes');
+const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 //middleware
 app.use(cors());
 app.use(bp.json());
@@ -24,8 +25,9 @@ app.get('/',(req,res) =>{
 
 
 
-
-
+//not found routes
+app.use(notFound)
+app.use(errorHandler)
 
 app.listen(port,() =>{
     console.log(`listening on http://localhost:${port}`)
