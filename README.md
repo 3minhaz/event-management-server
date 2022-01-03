@@ -29,7 +29,14 @@ fetch(`http://localhost:5000/api/package/create`,{
         'Content-Type': 'application/json'
         'authorization': `Bearer ${token}` //ei token ta local storage te store kora ache sekhan theke niben
     },
-    body: JSON.stringify(`ei jaiga data body hisebe dite hobe`),
+    body: JSON.stringify({
+    "package_name":"any name", //requerd
+    "image_link":"image er url link diben", //requerd
+    "description":"description text", //requerd
+    "categories":"categories text ", //requerd
+    "email":"tn@gmail.com" //requerd // current user email dite hobe,local storage e store kora ache sekhan theke niben ei user email
+    }),
+
  })
     .then(res => res.json())
     .then(data => console.log(data))
