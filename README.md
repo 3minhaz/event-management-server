@@ -36,6 +36,8 @@ fetch(`http://localhost:5000/api/package/create`,{
 
 ```
 
+#### packages geting all data Api url link: http://localhost:5000/api/package/packages
+
 ```Geting Packages Example :
 fetch(`http://localhost:5000/api/package/packages`,{
     methods:'GET',
