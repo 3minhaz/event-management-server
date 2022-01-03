@@ -1,5 +1,9 @@
 # event-management-server-side
 
+## npm install
+
+### npm run start-dev
+
 #### create register user Api url link: http://localhost:5000/users
 
 ```body pass Data example:
