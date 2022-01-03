@@ -10,6 +10,7 @@ connectDb();
 //import Custom Routes
 const userRoutes = require('./routes/userRoutes');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
+const mailSender = require('./sendMailer/sendMail');
 //middleware
 app.use(cors());
 app.use(bp.json());
@@ -20,8 +21,6 @@ app.use('/users',userRoutes)
 app.get('/',(req,res) =>{
     res.send("server running")
 })
-
-
 
 
 
