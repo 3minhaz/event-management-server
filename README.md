@@ -19,3 +19,32 @@
     "password":"123456", //requerd
 }
 ```
+
+#### package create Api url link: http://localhost:5000/api/package/create
+
+```Creating Package Example :
+fetch(`http://localhost:5000/api/package/create`,{
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+        'authorization': `Bearer ${token}` //ei token ta local storage te store kora ache sekhan theke niben
+    },
+    body: JSON.stringify(`ei jaiga data body hisebe dite hobe`),
+ })
+    .then(res => res.json())
+    .then(data => console.log(data))
+
+```
+
+```Geting Packages Example :
+fetch(`http://localhost:5000/api/package/packages`,{
+    methods:'GET',
+    headers:{
+        'Content-Type': 'application/json'
+        'authorization': `Bearer ${token}` //ei token ta local storage te store kora ache sekhan theke niben
+    }
+    .then(res => res.json())
+    .then(data => console.log(data))
+})
+
+```

@@ -9,6 +9,7 @@ const app = express()
 connectDb();
 //import Custom Routes
 const userRoutes = require('./routes/userRoutes');
+const packageRoutes = require('./routes/packageRoutes')
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 //middleware
 app.use(cors());
@@ -16,12 +17,12 @@ app.use(bp.json());
 app.use(bp.urlencoded({ extended: false }));
 //api calling
 app.use('/users',userRoutes)
+app.use('/api/package',packageRoutes)
+
 
 app.get('/',(req,res) =>{
     res.send("server running")
 })
-
-
 
 //not found routes
 app.use(notFound)
