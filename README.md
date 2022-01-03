@@ -5,7 +5,7 @@
 ```body pass Data example:
 {
     "name":"Emon", //requerd
-    "email":"emon2gmail.com",//requerd, must use unique email
+    "email":"emon@example.com",//requerd, must use unique email
     "password":"123456", //requerd
     "pic":"anything" // optional, by default creating default pic
 }
@@ -15,7 +15,7 @@
 
 ```body pass Data example:
 {
-    "email":"emon2gmail.com",//requerd
+    "email":"emon@example.com",//requerd
     "password":"123456", //requerd
 }
 ```
