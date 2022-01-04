@@ -12,13 +12,18 @@ const packageSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    price:{
+    price: {
         type: String,
         required: true
     },
     categories: {
         type: String,
         required: true
+    },
+    isAdmin: {
+        type: Boolean,
+        required: true,
+        default: false,
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -27,11 +32,11 @@ const packageSchema = mongoose.Schema({
     },
 },
     {
-        timestamps:true,
+        timestamps: true,
     }
 
 )
 
-const Packages = mongoose.model('Packages',packageSchema)
+const Packages = mongoose.model('Packages', packageSchema)
 module.exports = Packages;
 //{package_name: 'dsf', image-link: 'sd', description: 'dfds', price: 'dfs', categories: 'photography'}
