@@ -3,7 +3,7 @@ const User = require('../models/userModel')
 const Package = require('../models/packageModel');
 //creating package
 const createPackage = asyncHandler(async(req,res) =>{
-    console.log(req.user._id)
+    // console.log(req.user._id)
     const {package_name,price,image_link,description,categories,email} = req.body;
     if(!email){
         res.status(401);
