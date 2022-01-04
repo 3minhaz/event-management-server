@@ -27,12 +27,8 @@ const createPackage = asyncHandler(async(req,res) =>{
 
 //geting packages
 const getPackages = asyncHandler(async (req, res) =>{
-    const packages = await Package.find({ user: req.user._id });
-    if(packages){
-        res.json(packages)
-    }else{
-        res.json({"message":"package not found"})
-    }
+    const packages = await Package.find({});
+    res.json(packages)
 })
 
 module.exports ={ createPackage,getPackages};
